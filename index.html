@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Simple Portofolio</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- FONT GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <!-- FAB ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="simple-logo">
+        <img src="img/a_logo.png" alt="A simple logo"/>
+      </div>
+      <nav>
+        <a href="#intro">A Landing Page</a>
+        <p>|</p>
+        <a href="#about-me">About Me</a>
+        <p>|</p>
+        <a href="#portofolio">Portofolio</a>
+        <p>|</p>
+        <a href="#get-bamboozled">What's This?</a>
+        <p>|</p>
+        <a href="#bookshelf-submission">Bookshelf Submission</a>
+      </nav>
+    </header>
+    <main id="main-content">
+
+      <article class="intro" id="intro">
+        <h1 id="hello-name"></h1>
+      </article>
+
+      <article class="about-me" id="about-me">
+        <h1>Know me better!</h1>
+        <div id="carousel" class="carousel">
+          <div class="carousel-inner1" style="display: flex; align-content: center;">
+            <div class="carousel-item1">
+              <section>
+                <h2>My Biography</h2>
+                <p>
+                  Hello I'm Wildan, fresh graduate from Bogor Agricultural University's Computer Science Major. I enjoy developing software or solutions to automate repetitive chores or challenges, overcoming new challenge and learn new things to improve my hard and soft skills. I have a lot of expertise creating programs and mobile/web application then incorporating machine learning into them using languages like Python, Kotlin, Dart, Python, JavaScript, C++ and R. In order to come up with the best answer to the issue, I also knowledgeable with UI/UX design principles and implementations. Another hobby that I love is drawing illustrations.
+                </p>
+              </section>
+            </div>
+            <div class="carousel-item1">
+              <section>
+                <h2>Deep Dive Into Tech World!</h2>
+                <ul>
+                  <li>Mobile Tech Stack (Native Kotlin & Flutter)</li>
+                  <li>Web Tech Stack (NodeJS, Laravel, Tailwind, React)</li>
+                  <li>Others (Media Social Bots, Utility Scripts, IoT with Arduino)</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+      
+          <button class="carousel-control carousel-control-prev" onclick="changeSlide(-1)"></button>
+          <button class="carousel-control carousel-control-next" onclick="changeSlide(1)"></button>
+        </div>
+      </article>
+
+      <article class="portofolio" id="portofolio">
+        <h1>Hey, See My Project Here!</h1>
+        <div id="carousel" class="carousel">
+          <div class="carousel-inner2">
+            <div class="carousel-item2">
+              <section>
+                <h2>Mobile Apps (Native & Crossplatform)</h2>
+                <div class="section-content">
+                  <p>
+                    I specialize in developing user-friendly applications with a focus on effective communication, custom animations, and integration of features like authorization, geolocation, and real-time chat. I'm adept at mobile development best practices and Git versioning control. I've also developed Flutter Apps, and diversified my portfolio with projects showcasing design patterns and clean architecture.
+                  </p>
+                  <div class="section-img-container">
+                    <img class="ahwal-note" src="img/AhwalNote.png"/>
+                    <img class="togu" src="img/Togu.png"/>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="carousel-item2">
+              <section>
+                <h2>Web Apps</h2>
+                <div class="section-content">
+                  <p>
+                    I specialized in crafting robust solutions for web applications. My responsibilities included ERD and Database Schema Design using the Laravel Framework, ensuring a responsive layout across multiple devices. Employing the MVC software design pattern. Include implementing Account & Token Authorization using JWT, developing a Dashboard, and creating a Content Management System from scratch.
+                  </p>
+                  <div class="section-img-container">
+                    <img class="aido" src="img/Free Website Template Presentation Mockup.png"/>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="carousel-item2">
+              <section>
+                <h2>Miscellaneous</h2>
+                <div class="section-content">
+                  <p>
+                    I have a broad programming background that includes developing Media Social Bots for streamlined social media interactions, creating Utility Scripts for improved workflow efficiency, and working on IoT projects with Arduino using languages like Python, C++, and C#. My experience showcases versatility and adaptability across diverse programming applications.
+                  </p>
+                  <div class="section-img-container">
+                    <img class="bot-discord" src="img/dcbot.jpeg">
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+      
+          <button class="carousel-control carousel-control-prev" onclick="changeSlide2(-1)"></button>
+          <button class="carousel-control carousel-control-next" onclick="changeSlide2(1)"></button>
+        </div>
+      </article>
+
+      <article class="get-bamboozled" id="get-bamboozled">
+        <div>
+          <h1>What's This?</h1>
+          <h2>Use Arrow Keys to move the snake!</h2>
+        </div>
+        <section class="snake-game">
+          <canvas id="board"></canvas>
+          <button id="retryButton" style="display: none;">Retry</button>
+        </section>
+      </article>
+
+      <article class="bookshelf-submission" id="bookshelf-submission">
+        <h1>Bookshelf Feature</h1>
+        <div class="bookshelf_feature">
+          <section class="input_section">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBook">
+              <div class="input_group">
+                <div class="input">
+                  <label for="inputBookTitle">Judul</label>
+                  <input id="inputBookTitle" type="text" required>
+                </div>
+                <div class="input">
+                  <label for="inputBookAuthor">Penulis</label>
+                  <input id="inputBookAuthor" type="text" required>
+                </div>
+              </div>
+              <div class="input_group">
+                <div class="input">
+                  <label for="inputBookYear">Tahun</label>
+                  <input id="inputBookYear" type="number" required>
+                </div>
+                <div class="input_inline">
+                  <label for="inputBookIsComplete">Selesai dibaca</label>
+                  <input id="inputBookIsComplete" type="checkbox">
+                </div>
+              </div>
+              <button class="button_submit" id="bookSubmit" type="submit"><p>Masukkan Buku ke rak</p><span id="shelfType">Belum selesai dibaca</span></button>
+            </form>
+          </section>
+          
+          <section class="search_section" id="search_section">
+            <h2>Cari Buku (Opsional)</h2>
+            <form id="searchBook">
+              <label for="searchBookTitle">Judul</label>
+              <input id="searchBookTitle" type="text" placeholder="Kak Ros Cantik..">
+              <button id="searchSubmit" type="submit">Cari</button>
+            </form>
+            <div id="searchQueryResult">
+            </div>
+          </section>
+        </div>
+        
+        <section class="book_shelf">
+          <h2>Belum selesai dibaca</h2>
+          
+          <div id="incompleteBookshelfList" class="book_list">
+           <!-- <div class="book_item">
+             <h3>Book Title</h3>
+             <p>Penulis: John Doe</p>
+             <p>Tahun: 2002</p>
+        
+             <div class="action">
+               <button class="green">Selesai dibaca</button>
+               <button class="red">Hapus buku</button>
+             </div>
+           </div> -->
+
+          </div>
+        </section>
+
+        <div id="myModal" class="modal">
+
+          <!-- Modal Content -->
+          <div class="modal-content">
+              <span class="close" id="closeModalBtn">&times;</span>
+              <h2>Update buku</h2>
+              <form id="updateBook">
+                <div class="input_group">
+                  <div class="input">
+                    <label for="updateBookTitle">Judul</label>
+                    <input id="updateBookTitle" type="text" required>
+                  </div>
+                  <div class="input">
+                    <label for="updateBookAuthor">Penulis</label>
+                    <input id="updateBookAuthor" type="text" required>
+                  </div>
+                </div>
+                <div class="input_group">
+                  <div class="input">
+                    <label for="updateBookYear">Tahun</label>
+                    <input id="updateBookYear" type="number" required>
+                  </div>
+                  <div class="input_inline">
+                    <label for="updateBookIsComplete">Selesai dibaca</label>
+                    <input id="updateBookIsComplete" type="checkbox">
+                  </div>
+                </div>
+                <button class="button_submit" id="bookUpdate" type="submit"><span id="shelfType">Perbarui Buku</span></button>
+              </form>
+          </div>
+  
+        </div>
+
+        <article class="complete_book_shelf">
+          <section class="book_shelf">
+            <h2>Selesai dibaca</h2>
+            
+            <div id="completeBookshelfList" class="book_list">
+             <!-- <div class="book_item">
+               <h3>Book Title</h3>
+               <p>Penulis: John Doe</p>
+               <p>Tahun: 2002</p>
+              
+               <div class="action">
+                 <button class="green">Belum selesai di Baca</button>
+                 <button class="red">Hapus buku</button>
+               </div>
+             </div>
+             
+             <div class="book_item">
+                <h3>Book Title</h3>
+                <p>Penulis: John Doe</p>
+                <p>Tahun: 2002</p>
+              
+                <div class="action">
+                  <button class="green">Belum selesai di Baca</button>
+                  <button class="red">Hapus buku</button>
+                </div>
+              </div> -->
+
+            </div>
+          </section>
+        </article>
+      </article>
+      
+      <aside>
+        <div class="social-media">
+          <ul>
+            <li>
+              <p>Halo!</p>
+            </li>
+            <li>
+              <img class="pfp" src="img/pfp.jpg" alt="Photo profile"/>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+    </main>
+
+    <footer>
+      Also, You can contact me right here!
+      <div class="social-media">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/wildan-fajri-alfarabi-a01474201/"><i class="fab fa-linkedin-in"></i></a>
+            <p>LinkedIn</p>
+          </li>
+          <li>
+            <a href="https://github.com/Fortissible"><i class="fab fa-github"></i></a>
+            <p>Github</p>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/type_effect.js"></script>
+    <script src="js/snap_effect.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/snake_game.js"></script>
+    <script src="js/bookshelf.js"></script>
+    <script src="js/bookshelf_utils.js"></script>
+    <script src="js/update_modal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,710 @@
+body {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+  width: 100vw;
+  background-color: #f0f0f0; /* Add background color if needed */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 8px 0px 8px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10;
+}
+
+header nav {
+  font-weight: 600;
+  font-style: normal;
+
+  padding-bottom: 3px;
+  align-items: center;
+  padding-top: 16px;
+  display: flex;
+  gap: 16px;
+}
+
+header nav a {
+  color: black;
+  text-decoration: none;
+}
+
+header .simple-logo img {
+  height: 100px;
+  padding-right: 10vw;
+}
+
+/* MAIN */
+
+main {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  padding: 0 15vw 0 5vw;
+}
+
+article {
+  box-sizing: border-box;
+  align-self: left;
+  padding-top: 40vh;
+  padding-bottom: 40vh;
+  height: 100vh;
+  width: 75vw;
+}
+
+article.complete_book_shelf{
+  box-sizing: border-box;
+  align-self: left;
+  padding: 0 0 25vh 0;
+  width: 75vw;
+}
+
+div.book_item{
+  height: 25%;
+  width: 100%;
+}
+
+article.bookshelf-submission{
+  padding-top: 25vh;
+}
+
+main article h1{
+  margin: 0;
+}
+
+main article.intro h1#hello-name{
+  margin: 0;
+  font-size: 5vw;
+  border-right: 12px solid #333; /* Cursor effect */
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing text */
+  animation: typing-effect 1s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+
+main article h1{
+  padding-bottom: 16px;
+}
+
+main article h2{
+  font-size: 100%;
+}
+
+main article.get-bamboozled {
+  display: flex;
+}
+
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  z-index: -1;
+}
+
+main aside .social-media {
+  padding-top: 5rem;
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 1.5rem 1rem;
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
+  margin: auto;
+  background-color: #f0f0f0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+
+  transition: all 0.1s ease-in-out;
+}
+
+main aside div ul li p {
+  color: black;
+}
+
+main aside .social-media img.pfp {
+  border-radius: 50%;
+  height: 5rem;
+}
+
+@keyframes typing-effect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
+footer {
+  position: sticky;
+  bottom: 0px;
+  width: 100vw;
+  color: black;
+  background-color: #f0f0f0;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+footer li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px 0 32px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.section-content img {
+  padding: 0 8px 0 8px;
+  border-radius: 16px;
+}
+
+img.ahwal-note {
+  height: 20vh;
+}
+
+img.togu {
+  height: 20vh;
+}
+
+img.aido {
+  height: 20vh;
+}
+
+img.bot-discord {
+  width: 10vw;
+  margin-right: 2vw;
+}
+
+.section-content {
+  display: flex;
+}
+
+.section-img-container {
+  display: flex;
+}
+
+section.snake-game{
+  padding-left: 80px;
+}
+
+#board {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  border: 2px solid #000;
+}
+
+.snake, .food {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #00f;
+}
+
+.food {
+  background-color: #f00;
+}
+
+/* CAROUSEL */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-inner1 {
+  padding: 0 48px 0 48px;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item1 {
+  width: 100%;
+  flex: 0 0 calc(100% - 20%);
+  padding-right: 10%; /* Added margin */
+  padding-left: 10%;
+}
+
+.carousel-inner2 {
+  padding: 0 48px 0 48px;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item2 {
+  width: 100%;
+  flex: 0 0 calc(100% - 20%);
+  padding-right: 10%; /* Added margin */
+  padding-left: 10%;
+}
+
+.carousel-control {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: 10px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+}
+
+.carousel-control-next {
+  right: 10px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 14.354a.5.5 0 0 1 0-.708L10.293 8 4.646 2.354a.5.5 0 0 1 .708-.708l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708 0z'/%3e%3c/svg%3e") !important;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+  .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .get-bamboozled {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 75%;
+  }
+  p {
+    font-size: 50%;
+  }
+  a {
+    font-size: 75%;
+  }
+  footer {
+    font-size: 50%;
+  }
+  li {
+    font-size: 50%;
+  }
+
+  header .simple-logo img {
+    height: 50px;
+  }
+
+  .section-content img {
+    height: 5vh;
+  }
+
+  .carousel-inner1 {
+    padding: 0 48px 0 48px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item1 {
+    width: 100%;
+    flex: 0 0 calc(100% - 20%);
+    padding-right: 10%; /* Added margin */
+    padding-left: 10%;
+  }
+  
+  .carousel-inner2 {
+    padding: 0 48px 0 48px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item2 {
+    width: 100%;
+    flex: 0 0 calc(100%-20%);
+    padding-right: 10%; /* Added margin */
+    padding-left: 10%;
+  }
+
+  main aside .social-media img.pfp {
+    border-radius: 50%;
+    height: 2rem;
+  }
+  
+  main aside .social-media {
+    /* padding-top: 5rem; */
+    height: 100%;
+    display: flex;
+  }
+
+  main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 36px;
+    border-bottom-left-radius: 36px;
+    margin: auto;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0px !important;
+  }
+}
+
+/* BOOKSHELF CSS */
+.bookshelf_feature{
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: black;
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > .input_group > .input {
+  margin: 8px 0;
+  width: 100%;
+}
+
+.input_section > form > button {
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  
+  font-family: "Source Code Pro", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 16px;
+}
+
+.input_group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input_section > form > .input_group > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.input_section > form > .input > label {
+  color: black;
+  font-weight: bold;
+}
+
+.input_section > form > .input_group > .input > label {
+  color: black;
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.search_section > h2 {
+  color: black;
+}
+
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: flex;
+  align-items: center;
+}
+
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.search_section > form > button {
+  background-color: #f0f0f0;
+  color: black;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.book_shelf > h2 {
+  color: black;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.book_shelf > .book_list > .book_item > h3, p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: darkgreen;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: darkred;
+  color: white;
+}
+
+button.red {
+  background-color: darkred;
+  color: white;
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+}
+
+.book_shelf > .book_list > .book_item > .action > .blue {
+  background-color: darkblue;
+  color: white;
+}
+
+/* MODAL UPDATE */
+/* Add this to your styles.css file */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal > .modal-content > form {
+  margin: 16px;
+}
+
+.modal > .modal-content > form > button {
+  margin-top: 16px;
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+
+
+.modal > .modal-content > form > button > span {
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+}
+
+.modal > .modal-content > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.modal > .modal-content > form > .input_group > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.modal > .modal-content > form > .input > label {
+  color: black;
+  font-weight: bold;
+}
+
+.modal > .modal-content > form > .input_group > .input > label {
+  color: black;
+  font-weight: bold;
+}
+
+.modal > .modal-content > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.modal > .modal-content > form > .input_inline > label {
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.modal > .modal-content > form > .input_group {
+  padding-top:8px;
+}
